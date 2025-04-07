@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Meeting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        .icon {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('pexels-sora-shimazaki-5668772.jpg'); background-size: cover; background-position: center;"></body>
+    <div class="container">
+        <h2><i class="fa-solid fa-calendar-check icon"></i> Schedule a Meeting</h2>
+        <form id="appointmentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="datetime-local" id="datetime" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div class="message" id="responseMessage"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS Public Key
+        });
+
+        document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const datetime = document.getElementById("datetime").value;
+            const responseMessage = document.getElementById("responseMessage");
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                to_email: email,
+                to_name: name,
+                appointment_time: datetime
+            }).then(
+
+                function (response) {
+                    responseMessage.style.color = "green";
+                    responseMessage.textContent = "✅ Appointment booked! Confirmation email sent.";
+                },
+                function (error) {
+                    responseMessage.style.color = "red";
+                    responseMessage.textContent = "❌ Failed to send email. Please try again.";
+                }
+            );
+        });
+    </script>
+</body>
+
+
+</html>
+
+<body>
+
+    <div class="box">
+
+        <form action="">
+
+            <h2>Login Here</h2>
+
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" name="" id="" required>
+                <label for="">Email:</label>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="" id="" required>
+                <label for="">Password:</label>
+            </div>
+
+            <div class="forget">
+                <label for="">
+                    <input type="checkbox">Remember me
+                </label>
+                <label for="">
+                    Forget Password
+                </label>
+            </div>
+            <button> Log In</button>
+
+
+            <div class="register">
+                <p>Don't have an account ? <a href="">register</a></p>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!--Social Liks codings below-->
+    <a id="source-link" class="meta-link" href="https://t.me/+7yc_oGHnLJhlOWVl" target="_blank">
+        <i class="fas fa-link"></i>
+        <span class="roboto-mono">Join my Telegram</span>
+    </a>
+
+    <a id="yt-link" class="meta-link" href="https://www.youtube.com/@codewith_muhilan?sub_confirmation=1"
+        target="_blank">
+        <i class="fab fa-youtube"></i>
+        <span>Subscribe my channel..❤</span>
+    </a>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+</body>
