@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Gathering Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 4rem 0;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Columns */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Added a minimum height for visual consistency */
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 100%;         /*Icon takes full width of card*/
+    height: 200px;        /* Adjusted Height */
+    margin: 0 auto 20px;  /* Reduced margin-bottom */
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;   /* Optional - Slightly round the image corners*/
+}
+
+.service-title {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1;  /* Let the description take up remaining space */
+}
+
+.learn-more-btn {
+    display: block;        /* Button takes full width */
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: auto;  /* Push to the bottom */
+}
+
+.learn-more-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Features Section Styles */
+.features {
+    background: #f5f6fa;
+    padding: 4rem 0;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Professional Evidence Gathering Services</h1>
+        <p>Expert collection and analysis of evidence to build a strong foundation for your case</p>
+    </header>
+
+    <section class="services">
+        <div class="services-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://via.placeholder.com/300x250/3498db/ffffff?text=Document+Analysis"
+                            alt="Document Analysis">
+                    </div>
+                    <h2 class="service-title">Document Analysis</h2>
+                    <p class="service-description">Thorough examination and verification of all relevant documents,
+                        records, and written evidence.</p>
+                    <a href="#" class="learn-more-btn">Learn More</a>
+
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://via.placeholder.com/300x250/3498db/ffffff?text=Digital+Evidence"
+                            alt="Digital Evidence">
+                    </div>
+                    <h2 class="service-title">Digital Evidence</h2>
+                    <p class="service-description">Collection and analysis of electronic data, social media content, and
+                        digital communications.</p>
+                    <a href="#" class="learn-more-btn">Learn More</a>
+
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://via.placeholder.com/300x250/3498db/ffffff?text=Witness+Statements"
+                            alt="Witness Statements">
+                    </div>
+                    <h2 class="service-title">Witness Statements</h2>
+                    <p class="service-description">Professional interview and documentation of witness testimonies and
+                        statements.</p>
+
+                    <a href="#" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-container">
+            <h2>Why Choose Our Evidence Gathering Services</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <br><i>📊</i></br>
+                    <h3>Comprehensive Analysis</h3>
+                    <hr>
+                    <p>Detailed examination of all evidence types</p>
+                    </hr>
+                </div>
+                <div class="feature-item">
+                    <i>🔒</i>
+                    <h3>Secure Handling</h3>
+                    <p>Strict chain of custody protocols</p>
+                </div>
+                <div class="feature-item">
+                    <i>⚖</i>
+                    <h3>Legal Compliance</h3>
+                    <p>All evidence gathered according to legal standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

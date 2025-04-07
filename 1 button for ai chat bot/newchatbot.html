@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Case AI Chatbot</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Criminal Case AI Chatbot</h1>
+        <div id="chatbox" class="chatbox">
+            <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" id="userInput" placeholder="Ask me about criminal cases..." />
+        <button onclick="sendMessage()">Send</button>
+        <div id="suggestions" class="suggestions">
+            <h3>Suggested Questions:</h3>
+            <ul>
+                <li onclick="setInput('What are the possible defenses?')">What are the possible defenses?</li>
+                <li onclick="setInput('What is the sentencing process?')">What is the sentencing process?</li>
+                <li onclick="setInput('How to appeal a decision?')">How to appeal a decision?</li>
+                <li onclick="setInput('Can I get legal aid?')">Can I get legal aid?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Schedule an Appointment</h2>
+            <form id="appointmentForm">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" required><br><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" required><br><br>
+                <label for="date">Preferred Date:</label><br>
+                <input type="date" id="date" required><br><br>
+                <button type="submit">Schedule</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

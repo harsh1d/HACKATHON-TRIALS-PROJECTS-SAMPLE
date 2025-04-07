@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+</head>
+<body>
+    <h1>Schedule an Appointment</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form action="/schedule" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="appointment_time">Select Appointment Time:</label>
+        <select id="appointment_time" name="appointment_time" required>
+            <option value="2025-02-22T10:00">2025-02-22 10:00 AM</option>
+            <option value="2025-02-22T11:00">2025-02-22 11:00 AM</option>
+            <option value="2025-02-22T12:00">2025-02-22 12:00 PM</option>
+        </select><br><br>
+
+        <input type="submit" value="Schedule Appointment">
+    </form>
+</body>
+</html>
